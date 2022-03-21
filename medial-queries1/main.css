@@ -1,3 +1,55 @@
+* {border: 1px solid black;
+  box-sizing: border-box;
+  }
 body {
   background: blanchedalmond;
+  margin:0;
 }
+ 
+ /* mobile */
+    .container {
+      display:flex;
+      flex-direction: column;
+      margin: 10px;
+      min-height: 100vh;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  
+    .a {
+      background-color: pink; 
+      flex-grow: 1;
+    } 
+
+    .b {
+      background-color: aliceblue;
+      flex-grow: 3;
+    }
+
+    .c {
+      background-color: aquamarine;
+      flex-grow: 1;
+    }
+
+  /* desktop */
+  @media (min-width: 600px) {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }  
+    .a {
+      width: 100%;
+      /* background-color: red; */
+      flex-grow: 1;
+      height: 30vh;
+      }
+    
+    .b {
+      flex-grow: 1;
+      height:70vh;
+    } 
+    .c {
+      flex-grow: 0.5;
+      height:70vh;
+    }
+  }
